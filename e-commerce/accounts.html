@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce website design</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+        </div>
+        <nav>
+          <ul id="menuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Product</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="accounts.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="cart.html">
+          <img src="images/cart.png" alt="" class="cart-icon"
+        /></a>
+        <img
+          src="images/menu.png"
+          alt=""
+          class="menu-icon"
+          onclick="menuToggle()"
+        />
+      </div>
+    </div>
+
+    <!-- Accounts page -->
+
+    <div class="accounts-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <img src="images/image1.png" alt="" style="width: 100%" />
+          </div>
+          <div class="col-2">
+            <div class="form-container">
+              <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="indicator" />
+              </div>
+              <form id="loginForm">
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <button type="button" class="btn">Login</button>
+                <a href="">Forget password?</a>
+              </form>
+              <form id="regForm">
+                <input type="text" placeholder="Username" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button type="button" class="btn">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>Download app for Android & IOS devices.</p>
+            <div class="app-logo">
+              <img src="images/play-store.png" alt="" />
+              <img src="images/app-store.png" alt="" />
+            </div>
+          </div>
+          <div class="footer-col-2">
+            <img src="images/logo-white.png" alt="" />
+            <p>
+              Our purpose is to sustainably make the pleasure and benefits of
+              sports accessible to many.
+            </p>
+          </div>
+          <div class="footer-col-3">
+            <h3>Useful links</h3>
+            <ul>
+              <li>Coupons</li>
+              <li>Blog post</li>
+              <li>Return policy</li>
+            </ul>
+          </div>
+          <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+              <li>Facebook</li>
+              <li>Instagram</li>
+              <li>Twitter</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <p class="copyright">
+          Copyright <i class="fa fa-copyright"></i> 2021 - Praveen
+        </p>
+      </div>
+    </div>
+
+    <script src="js/script2.js"></script>
+  </body>
+</html>
