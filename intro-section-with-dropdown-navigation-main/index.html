@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-container">
+          <img class="logo" src="images/logo.svg" />
+          <ul>
+            <li id="features">
+              <div class="dropdown">
+                <a class="d-flex">
+                  Features
+                  <img
+                    src="images/icon-arrow-down.svg"
+                    class="arrow-img img-down" /><img
+                    src="images/icon-arrow-up.svg"
+                    class="arrow-img img-up"
+                    style="display: none"
+                /></a>
+                <div
+                  class="dropdown-content features-dropdown"
+                  id="features-dropdown"
+                >
+                  <ul>
+                    <li>
+                      <a class="d-flex">
+                        <div><img src="images/icon-todo.svg" /></div>
+                        <div>Todo List</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="d-flex"
+                        ><div><img src="images/icon-calendar.svg" /></div>
+                        <div>Calender</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="d-flex">
+                        <div><img src="images/icon-reminders.svg" /></div>
+                        <div>Reminders</div>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="d-flex">
+                        <div><img src="images/icon-planning.svg" /></div>
+                        <div>Planning</div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li id="company">
+              <div class="dropdown">
+                <a class="d-flex">
+                  Company
+                  <img
+                    src="images/icon-arrow-down.svg"
+                    class="arrow-img img-down" /><img
+                    src="images/icon-arrow-up.svg"
+                    class="arrow-img img-up"
+                    style="display: none"
+                /></a>
+                <div
+                  class="dropdown-content company-dropdown"
+                  id="company-dropdown"
+                >
+                  <ul>
+                    <li><a> History </a></li>
+                    <li><a> Our Team </a></li>
+                    <li><a> Blog </a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a> Careers </a>
+            </li>
+            <li>
+              <a> About </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-container">
+          <button class="btn btn-default">Login</button>
+          <button class="btn btn-primary">Register</button>
+          <img
+            src="images/icon-menu.svg"
+            class="menu-img"
+            onclick="openNav()"
+          />
+        </div>
+      </nav>
+    </header>
+
+    <div class="showcase">
+      <div class="showcase-content">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+
+        <button class="btn btn-secondary">Learn more</button>
+        <div class="sponsers">
+          <div class="sponser-items pl-0">
+            <img src="images/client-databiz.svg" alt="" />
+          </div>
+          <div class="sponser-items">
+            <img src="images/client-audiophile.svg" alt="" />
+          </div>
+          <div class="sponser-items">
+            <img src="images/client-meet.svg" alt="" />
+          </div>
+          <div class="sponser-items">
+            <img src="images/client-maker.svg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="showcase-img">
+        <img class="desktop-img" src="images/image-hero-desktop.png" alt="" />
+        <img class="mobile-img" src="images/image-hero-mobile.png" alt="" />
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <ul>
+        <li id="features-accordion">
+          <div id="fets-accordion" class="accordion">
+            <a class="d-flex">
+              Features &nbsp;&nbsp;
+              <img
+                src="images/icon-arrow-down.svg"
+                class="arrow-img img-down" /><img
+                src="images/icon-arrow-up.svg"
+                class="arrow-img img-up"
+                style="display: none"
+            /></a>
+            <div class="fets-accordion-content">
+              <ul>
+                <li>
+                  <a class="d-flex">
+                    <div><img src="images/icon-todo.svg" /></div>
+                    <div>Todo List</div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex"
+                    ><div><img src="images/icon-calendar.svg" /></div>
+                    <div>Calender</div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex">
+                    <div><img src="images/icon-reminders.svg" /></div>
+                    <div>Reminders</div>
+                  </a>
+                </li>
+                <li>
+                  <a class="d-flex">
+                    <div><img src="images/icon-planning.svg" /></div>
+                    <div>Planning</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li id="company-accordion">
+          <div id="comp-accordion" class="accordion">
+            <a class="d-flex">
+              Company &nbsp;&nbsp;
+              <img
+                src="images/icon-arrow-down.svg"
+                class="arrow-img img-down" /><img
+                src="images/icon-arrow-up.svg"
+                class="arrow-img img-up"
+                style="display: none"
+            /></a>
+            <div class="comp-accordion-content">
+              <ul>
+                <li><a> History </a></li>
+                <li><a> Our Team </a></li>
+                <li><a> Blog </a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a> Careers </a>
+        </li>
+        <li>
+          <a> About </a>
+        </li>
+        <div class="sidenav-btn-container">
+          <button class="btn btn-default">Login</button>
+          <button class="btn btn-primary">Register</button>
+        </div>
+      </ul>
+    </div>
+
+    <!-- <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Praveen P</a>.
+      </div>
+    </footer> -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
